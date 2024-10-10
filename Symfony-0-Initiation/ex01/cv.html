@@ -3,6 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>CV - Shrek</title>
+        <style>
+            th, td {
+                border: 1px solid blue;
+                padding: 8px;
+            }
+            td.bottomRight {
+                border-right: 1px solid #424242;
+                border-bottom: 1px solid #424242;
+            }
+            td.topBottomRight {
+                border-bottom: 1px solid #424242;
+            }
+            td.bottomLeft {
+                border-right: 1px solid #424242;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -46,9 +62,35 @@
                     </li>
                 </ol>
             </article>
+            <article>
+                <table style="border-collapse: collapse; width: 50%;">
+                    <tr>
+                        <th>Languages</th>
+                        <th>Level</th>
+                    </tr>
+                    <tr>
+                        <td>Ogre</td>
+                        <td>C1</td>
+                    </tr>
+                    <tr>
+                        <td>Human</td>
+                        <td class="topBottomRight">B1</td>
+                    </tr>
+                    <tr>
+                        <td class="bottomLeft">Elvish</td>
+                        <td class=bottomRight>A2</td>
+                    </tr>
+                </table>
+            </article>
         </main>
         <footer>
-            
+            <article>
+                <h3>Contact</h3>
+                <ul>
+                    <li>shrek@ogre.com</li>
+                    <li>Shrek's swamp</li>
+                </ul>
+            </article>
         </footer>
     </body>
 </html>
