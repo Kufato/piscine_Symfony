@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("myForm");
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-        displayFormContents();  // Call the function to display form contents
+        event.preventDefault();
+        displayFormContents();
     });
 });
 
@@ -30,5 +30,5 @@ function displayFormContents() {
     else
         out += 'Student at 42 = no';
 
-    console.log(out);
+    alert(out);
 }
