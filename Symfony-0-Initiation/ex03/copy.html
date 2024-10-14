@@ -1,77 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Skills</title>
-        <link rel="stylesheet" href="style.css">
-        <style>
-            .progress-wrapper {
-                position: relative;
-                width: 100%;
-            }
-            .progress-wrapper .progress-percentage {
-                position: absolute;
-                top: -25px;
-                transform: translateX(-50%);
-            }
-            .frontend ul, .backend ul {
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="frontend">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .progress-wrapper p{
+            display: inline;
+        }
+        .progress-percentage{
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
             <h2>Frontend</h2>
-            <ul>
-                <li>
-                    <p>HTML5</p>
-                    <div class="progress-wrapper">
-                        <p class="progress-percentage" style="left: 80%;">80%</p>
-                        <progress class="html5" value="80" max="100"></progress>
-                    </div>
-                </li>
-                <li>
-                    <p>CSS3</p>
-                    <div class="progress-wrapper">
-                        <p class="progress-percentage" style="left: 60%;">60%</p>
-                        <progress class="css3" value="60" max="100"></progress>
-                    </div>
-                </li>
-                <li>
-                    <p>jQuery</p>
-                    <div class="progress-wrapper">
-                        <p class="progress-percentage" style="left: 50%;">50%</p>
-                        <progress class="jquery" value="50" max="100"></progress>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="backend">
+            <div class="progress-wrapper">
+                <p>HTML5</p>
+                <p class="progress-percentage" style="left:54%;">80%</p>
+                <progress class="html5" max="100" value="80"></progress>
+            </div>
+            
+            <div class="progress-wrapper">
+                <p>CSS3</p>
+                <p class="progress-percentage" style="left:39%;">60%</p>
+                <progress class="css3" max="100" value="60">60%</progress>
+            </div>
+            
+            <div class="progress-wrapper">
+                <p>jQuery</p>
+                <p class="progress-percentage" style="left:26%;">50%</p>
+                <progress class="jquery" max="100" value="50">50%</progress>
+            </div>
+        </li>
+        <li>
             <h2>Backend</h2>
-            <ul>
-                <li>
-                    <p>Python</p>
-                    <div class="progress-wrapper">
-                        <p class="progress-percentage" style="left: 75%;">75%</p>
-                        <progress class="python" value="75" max="100"></progress>
-                    </div>
-                </li>
-                <li>
-                    <p>PHP</p>
-                    <div class="progress-wrapper">
-                        <p class="progress-percentage" style="left: 65%;">65%</p>
-                        <progress class="php" value="65" max="100"></progress>
-                    </div>
-                </li>
-                <li>
-                    <p>Node.js</p>
-                    <div class="progress-wrapper">
-                        <p class="progress-percentage" style="left: 35%;">35%</p>
-                        <progress class="node-js" value="35" max="100"></progress>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </body>
+            <div class="progress-wrapper">
+                <p>Python</p>
+                <p class="progress-percentage" style="left:50%;">70%</p>
+                <progress class="python" max="100" value="75">75%</progress>
+            </div>
+
+            <div class="progress-wrapper">
+                <p>PHP</p>
+                <p class="progress-percentage" style="left:45%">65%</p>
+                <progress class="php" max="100" value="65">65%</progress>
+            </div>
+
+            <div class="progress-wrapper">
+                <p>Node.js</p>
+                <p class="progress-percentage" style="left:10%;">35%</p>
+                <progress class="node-js" max="100" value="35">35%</progress>
+            </div>
+        </li>
+    </ul>
+</body>
 </html>
