@@ -1,39 +1,660 @@
-
-    <!DOCTYPE html>
-    <html lang='en'>
-    <head>
-        <meta charset='UTF-8'>
-        <title>Periodic table of elements</title>
-        <style>
-            table {
-                width: 10%;
-                border-collapse: collapse;
-            }
-            th, td {
-                border: 1px solid blue;
-                padding: 8px;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Periodic table of elements</h1>
-        </header>
-        <main>
-            <table>
-                <tr>
-                    <td>
-                        <h4>Hydrogen</h4>
-                            <ul>
-                                <li>No 42</li>
-                                <li>H</li>
-                                <Li>1.00794 </li>
-                                <li>1 electron</li>
-                            <ul>
-                    </td>
-                </tr>
-            </table>
-        </main>
-    </body>
-    </html>
-    
+<!DOCTYPE html>
+<html lang='en'> 
+<head>
+    <meta charset='UTF-8'>
+    <title>Periodic table of elements</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+        .empty {
+            border: none;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Periodic table of elements</h1>
+    </header>
+    <table><tr><td>
+    <h4>Hydrogen (H)</h4>
+    <ul>
+        <li>Number: 1</li>
+        <li>Molar Mass: 1.00794</li>
+        <li>Electrons: 1</li>
+    </ul>
+</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>
+    <h4>Helium (He)</h4>
+    <ul>
+        <li>Number: 2</li>
+        <li>Molar Mass: 4.002602</li>
+        <li>Electrons: 2</li>
+    </ul>
+</td><td class="empty"></td></tr>
+<tr><td>
+    <h4>Lithium (Li)</h4>
+    <ul>
+        <li>Number: 3</li>
+        <li>Molar Mass: 6.941</li>
+        <li>Electrons: 2 1</li>
+    </ul>
+</td><td>
+    <h4>Beryllium (Be)</h4>
+    <ul>
+        <li>Number: 4</li>
+        <li>Molar Mass: 9.012182</li>
+        <li>Electrons: 2 2</li>
+    </ul>
+</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>
+    <h4>Boron (B)</h4>
+    <ul>
+        <li>Number: 5</li>
+        <li>Molar Mass: 10.811</li>
+        <li>Electrons: 2 3</li>
+    </ul>
+</td><td>
+    <h4>Carbon (C)</h4>
+    <ul>
+        <li>Number: 6</li>
+        <li>Molar Mass: 12.0107</li>
+        <li>Electrons: 2 4</li>
+    </ul>
+</td><td>
+    <h4>Nitrogen (N)</h4>
+    <ul>
+        <li>Number: 7</li>
+        <li>Molar Mass: 14.0067</li>
+        <li>Electrons: 2 5</li>
+    </ul>
+</td><td>
+    <h4>Oxygen (O)</h4>
+    <ul>
+        <li>Number: 8</li>
+        <li>Molar Mass: 15.9994</li>
+        <li>Electrons: 2 6</li>
+    </ul>
+</td><td>
+    <h4>Fluorine (F)</h4>
+    <ul>
+        <li>Number: 9</li>
+        <li>Molar Mass: 18.998404</li>
+        <li>Electrons: 2 7</li>
+    </ul>
+</td><td>
+    <h4>Neon (Ne)</h4>
+    <ul>
+        <li>Number: 10</li>
+        <li>Molar Mass: 20.1797</li>
+        <li>Electrons: 2 8</li>
+    </ul>
+</td><td class="empty"></td></tr>
+<tr><td>
+    <h4>Sodium (Na)</h4>
+    <ul>
+        <li>Number: 11</li>
+        <li>Molar Mass: 22.989769</li>
+        <li>Electrons: 2 8 1</li>
+    </ul>
+</td><td>
+    <h4>Magnesium (Mg)</h4>
+    <ul>
+        <li>Number: 12</li>
+        <li>Molar Mass: 24.305</li>
+        <li>Electrons: 2 8 2</li>
+    </ul>
+</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>
+    <h4>Aluminium (Al)</h4>
+    <ul>
+        <li>Number: 13</li>
+        <li>Molar Mass: 26.981539</li>
+        <li>Electrons: 2 8 3</li>
+    </ul>
+</td><td>
+    <h4>Silicon (Si)</h4>
+    <ul>
+        <li>Number: 14</li>
+        <li>Molar Mass: 28.0855</li>
+        <li>Electrons: 2 8 4</li>
+    </ul>
+</td><td>
+    <h4>Phosphorus (P)</h4>
+    <ul>
+        <li>Number: 15</li>
+        <li>Molar Mass: 30.973763</li>
+        <li>Electrons: 2 8 5</li>
+    </ul>
+</td><td>
+    <h4>Sulfur (S)</h4>
+    <ul>
+        <li>Number: 16</li>
+        <li>Molar Mass: 32.065</li>
+        <li>Electrons: 2 8 6</li>
+    </ul>
+</td><td>
+    <h4>Chlorine (Cl)</h4>
+    <ul>
+        <li>Number: 17</li>
+        <li>Molar Mass: 35.453</li>
+        <li>Electrons: 2 8 7</li>
+    </ul>
+</td><td>
+    <h4>Argon (Ar)</h4>
+    <ul>
+        <li>Number: 18</li>
+        <li>Molar Mass: 39.948</li>
+        <li>Electrons: 2 8 8</li>
+    </ul>
+</td><td class="empty"></td></tr>
+<tr><td>
+    <h4>Potassium (K)</h4>
+    <ul>
+        <li>Number: 19</li>
+        <li>Molar Mass: 39.0983</li>
+        <li>Electrons: 2 8 8 1</li>
+    </ul>
+</td><td>
+    <h4>Calcium (Ca)</h4>
+    <ul>
+        <li>Number: 20</li>
+        <li>Molar Mass: 40.078</li>
+        <li>Electrons: 2 8 8 2</li>
+    </ul>
+</td><td>
+    <h4>Scandium (Sc)</h4>
+    <ul>
+        <li>Number: 21</li>
+        <li>Molar Mass: 44.955914</li>
+        <li>Electrons: 2 8 9 2</li>
+    </ul>
+</td><td>
+    <h4>Titanium (Ti)</h4>
+    <ul>
+        <li>Number: 22</li>
+        <li>Molar Mass: 47.867</li>
+        <li>Electrons: 2 8 10 2</li>
+    </ul>
+</td><td>
+    <h4>Vanadium (V)</h4>
+    <ul>
+        <li>Number: 23</li>
+        <li>Molar Mass: 50.9415</li>
+        <li>Electrons: 2 8 11 2</li>
+    </ul>
+</td><td>
+    <h4>Chromium (Cr)</h4>
+    <ul>
+        <li>Number: 24</li>
+        <li>Molar Mass: 51.9961</li>
+        <li>Electrons: 2 8 13 1</li>
+    </ul>
+</td><td>
+    <h4>Manganese (Mn)</h4>
+    <ul>
+        <li>Number: 25</li>
+        <li>Molar Mass: 54.938046</li>
+        <li>Electrons: 2 8 13 2</li>
+    </ul>
+</td><td>
+    <h4>Iron (Fe)</h4>
+    <ul>
+        <li>Number: 26</li>
+        <li>Molar Mass: 55.845</li>
+        <li>Electrons: 2 8 14 2</li>
+    </ul>
+</td><td>
+    <h4>Cobalt (Co)</h4>
+    <ul>
+        <li>Number: 27</li>
+        <li>Molar Mass: 58.933193</li>
+        <li>Electrons: 2 8 15 2</li>
+    </ul>
+</td><td>
+    <h4>Nickel (Ni)</h4>
+    <ul>
+        <li>Number: 28</li>
+        <li>Molar Mass: 58.6934</li>
+        <li>Electrons: 2 8 16 2</li>
+    </ul>
+</td><td>
+    <h4>Copper (Cu)</h4>
+    <ul>
+        <li>Number: 29</li>
+        <li>Molar Mass: 63.546</li>
+        <li>Electrons: 2 8 18 1</li>
+    </ul>
+</td><td>
+    <h4>Zinc (Zn)</h4>
+    <ul>
+        <li>Number: 30</li>
+        <li>Molar Mass: 65.38</li>
+        <li>Electrons: 2 8 18 2</li>
+    </ul>
+</td><td>
+    <h4>Gallium (Ga)</h4>
+    <ul>
+        <li>Number: 31</li>
+        <li>Molar Mass: 69.723</li>
+        <li>Electrons: 2 8 18 3</li>
+    </ul>
+</td><td>
+    <h4>Germanium (Ge)</h4>
+    <ul>
+        <li>Number: 32</li>
+        <li>Molar Mass: 72.63</li>
+        <li>Electrons: 2 8 18 4</li>
+    </ul>
+</td><td>
+    <h4>Arsenic (As)</h4>
+    <ul>
+        <li>Number: 33</li>
+        <li>Molar Mass: 74.9216</li>
+        <li>Electrons: 2 8 18 5</li>
+    </ul>
+</td><td>
+    <h4>Selenium (Se)</h4>
+    <ul>
+        <li>Number: 34</li>
+        <li>Molar Mass: 78.96</li>
+        <li>Electrons: 2 8 18 6</li>
+    </ul>
+</td><td>
+    <h4>Bromine (Br)</h4>
+    <ul>
+        <li>Number: 35</li>
+        <li>Molar Mass: 79.904</li>
+        <li>Electrons: 2 8 18 7</li>
+    </ul>
+</td><td>
+    <h4>Krypton (Kr)</h4>
+    <ul>
+        <li>Number: 36</li>
+        <li>Molar Mass: 83.798</li>
+        <li>Electrons: 2 8 18 8</li>
+    </ul>
+</td><td class="empty"></td></tr>
+<tr><td>
+    <h4>Rubidium (Rb)</h4>
+    <ul>
+        <li>Number: 37</li>
+        <li>Molar Mass: 85.4678</li>
+        <li>Electrons: 2 8 18 8 1</li>
+    </ul>
+</td><td>
+    <h4>Strontium (Sr)</h4>
+    <ul>
+        <li>Number: 38</li>
+        <li>Molar Mass: 87.62</li>
+        <li>Electrons: 2 8 18 8 2</li>
+    </ul>
+</td><td>
+    <h4>Yttrium (Y)</h4>
+    <ul>
+        <li>Number: 39</li>
+        <li>Molar Mass: 88.90585</li>
+        <li>Electrons: 2 8 18 9 2</li>
+    </ul>
+</td><td>
+    <h4>Zirconium (Zr)</h4>
+    <ul>
+        <li>Number: 40</li>
+        <li>Molar Mass: 91.224</li>
+        <li>Electrons: 2 8 18 10 2</li>
+    </ul>
+</td><td>
+    <h4>Niobium (Nb)</h4>
+    <ul>
+        <li>Number: 41</li>
+        <li>Molar Mass: 92.90638</li>
+        <li>Electrons: 2 8 18 12 1</li>
+    </ul>
+</td><td>
+    <h4>Molybdenum (Mo)</h4>
+    <ul>
+        <li>Number: 42</li>
+        <li>Molar Mass: 95.96</li>
+        <li>Electrons: 2 8 18 13 1</li>
+    </ul>
+</td><td>
+    <h4>Technetium (Tc)</h4>
+    <ul>
+        <li>Number: 43</li>
+        <li>Molar Mass: 98</li>
+        <li>Electrons: 2 8 18 13 2</li>
+    </ul>
+</td><td>
+    <h4>Ruthenium (Ru)</h4>
+    <ul>
+        <li>Number: 44</li>
+        <li>Molar Mass: 101.07</li>
+        <li>Electrons: 2 8 18 15 1</li>
+    </ul>
+</td><td>
+    <h4>Rhodium (Rh)</h4>
+    <ul>
+        <li>Number: 45</li>
+        <li>Molar Mass: 102.9055</li>
+        <li>Electrons: 2 8 18 16 1</li>
+    </ul>
+</td><td>
+    <h4>Palladium (Pd)</h4>
+    <ul>
+        <li>Number: 46</li>
+        <li>Molar Mass: 106.42</li>
+        <li>Electrons: 2 8 18 18</li>
+    </ul>
+</td><td>
+    <h4>Silver (Ag)</h4>
+    <ul>
+        <li>Number: 47</li>
+        <li>Molar Mass: 107.8682</li>
+        <li>Electrons: 2 8 18 18 1</li>
+    </ul>
+</td><td>
+    <h4>Cadmium (Cd)</h4>
+    <ul>
+        <li>Number: 48</li>
+        <li>Molar Mass: 112.411</li>
+        <li>Electrons: 2 8 18 18 2</li>
+    </ul>
+</td><td>
+    <h4>Indium (In)</h4>
+    <ul>
+        <li>Number: 49</li>
+        <li>Molar Mass: 114.818</li>
+        <li>Electrons: 2 8 18 18 3</li>
+    </ul>
+</td><td>
+    <h4>Tin (Sn)</h4>
+    <ul>
+        <li>Number: 50</li>
+        <li>Molar Mass: 118.71</li>
+        <li>Electrons: 2 8 18 18 4</li>
+    </ul>
+</td><td>
+    <h4>Antimony (Sb)</h4>
+    <ul>
+        <li>Number: 51</li>
+        <li>Molar Mass: 121.76</li>
+        <li>Electrons: 2 8 18 18 5</li>
+    </ul>
+</td><td>
+    <h4>Tellurium (Te)</h4>
+    <ul>
+        <li>Number: 52</li>
+        <li>Molar Mass: 127.6</li>
+        <li>Electrons: 2 8 18 18 6</li>
+    </ul>
+</td><td>
+    <h4>Iodine (I)</h4>
+    <ul>
+        <li>Number: 53</li>
+        <li>Molar Mass: 126.90447</li>
+        <li>Electrons: 2 8 18 18 7</li>
+    </ul>
+</td><td>
+    <h4>Xenon (Xe)</h4>
+    <ul>
+        <li>Number: 54</li>
+        <li>Molar Mass: 131.293</li>
+        <li>Electrons: 2 8 18 18 8</li>
+    </ul>
+</td><td class="empty"></td></tr>
+<tr><td>
+    <h4>Caesium (Cs)</h4>
+    <ul>
+        <li>Number: 55</li>
+        <li>Molar Mass: 132.90546</li>
+        <li>Electrons: 2 8 18 18 8 1</li>
+    </ul>
+</td><td>
+    <h4>Barium (Ba)</h4>
+    <ul>
+        <li>Number: 56</li>
+        <li>Molar Mass: 137.327</li>
+        <li>Electrons: 2 8 18 18 8 2</li>
+    </ul>
+</td><td class="empty"></td><td>
+    <h4>Hafnium (Hf)</h4>
+    <ul>
+        <li>Number: 72</li>
+        <li>Molar Mass: 178.49</li>
+        <li>Electrons: 2 8 18 32 10 2</li>
+    </ul>
+</td><td>
+    <h4>Tantalum (Ta)</h4>
+    <ul>
+        <li>Number: 73</li>
+        <li>Molar Mass: 180.94788</li>
+        <li>Electrons: 2 8 18 32 11 2</li>
+    </ul>
+</td><td>
+    <h4>Tungsten (W)</h4>
+    <ul>
+        <li>Number: 74</li>
+        <li>Molar Mass: 183.84</li>
+        <li>Electrons: 2 8 18 32 12 2</li>
+    </ul>
+</td><td>
+    <h4>Rhenium (Re)</h4>
+    <ul>
+        <li>Number: 75</li>
+        <li>Molar Mass: 186.207</li>
+        <li>Electrons: 2 8 18 32 13 2</li>
+    </ul>
+</td><td>
+    <h4>Osmium (Os)</h4>
+    <ul>
+        <li>Number: 76</li>
+        <li>Molar Mass: 190.23</li>
+        <li>Electrons: 2 8 18 32 14 2</li>
+    </ul>
+</td><td>
+    <h4>Iridium (Ir)</h4>
+    <ul>
+        <li>Number: 77</li>
+        <li>Molar Mass: 192.217</li>
+        <li>Electrons: 2 8 18 32 15 2</li>
+    </ul>
+</td><td>
+    <h4>Platinum (Pt)</h4>
+    <ul>
+        <li>Number: 78</li>
+        <li>Molar Mass: 195.084</li>
+        <li>Electrons: 2 8 18 32 17 1</li>
+    </ul>
+</td><td>
+    <h4>Gold (Au)</h4>
+    <ul>
+        <li>Number: 79</li>
+        <li>Molar Mass: 196.96657</li>
+        <li>Electrons: 2 8 18 32 18 1</li>
+    </ul>
+</td><td>
+    <h4>Mercury (Hg)</h4>
+    <ul>
+        <li>Number: 80</li>
+        <li>Molar Mass: 200.59</li>
+        <li>Electrons: 2 8 18 32 18 2</li>
+    </ul>
+</td><td>
+    <h4>Thallium (Tl)</h4>
+    <ul>
+        <li>Number: 81</li>
+        <li>Molar Mass: 204.3833</li>
+        <li>Electrons: 2 8 18 32 18 3</li>
+    </ul>
+</td><td>
+    <h4>Lead (Pb)</h4>
+    <ul>
+        <li>Number: 82</li>
+        <li>Molar Mass: 207.2</li>
+        <li>Electrons: 2 8 18 32 18 4</li>
+    </ul>
+</td><td>
+    <h4>Bismuth (Bi)</h4>
+    <ul>
+        <li>Number: 83</li>
+        <li>Molar Mass: 208.9804</li>
+        <li>Electrons: 2 8 18 32 18 5</li>
+    </ul>
+</td><td>
+    <h4>Polonium (Po)</h4>
+    <ul>
+        <li>Number: 84</li>
+        <li>Molar Mass: 209</li>
+        <li>Electrons: 2 8 18 32 18 6</li>
+    </ul>
+</td><td>
+    <h4>Astatine (At)</h4>
+    <ul>
+        <li>Number: 85</li>
+        <li>Molar Mass: 210</li>
+        <li>Electrons: 2 8 18 32 18 7</li>
+    </ul>
+</td><td>
+    <h4>Radon (Rn)</h4>
+    <ul>
+        <li>Number: 86</li>
+        <li>Molar Mass: 222</li>
+        <li>Electrons: 2 8 18 32 18 8</li>
+    </ul>
+</td><td class="empty"></td></tr>
+<tr><td>
+    <h4>Francium (Fr)</h4>
+    <ul>
+        <li>Number: 87</li>
+        <li>Molar Mass: 223</li>
+        <li>Electrons: 2 8 18 32 18 8 1</li>
+    </ul>
+</td><td>
+    <h4>Radium (Ra)</h4>
+    <ul>
+        <li>Number: 88</li>
+        <li>Molar Mass: 226</li>
+        <li>Electrons: 2 8 18 32 18 8 2</li>
+    </ul>
+</td><td class="empty"></td><td>
+    <h4>Rutherfordium (Rf)</h4>
+    <ul>
+        <li>Number: 104</li>
+        <li>Molar Mass: 267</li>
+        <li>Electrons: 2 8 18 32 32 10 2</li>
+    </ul>
+</td><td>
+    <h4>Dubnium (Db)</h4>
+    <ul>
+        <li>Number: 105</li>
+        <li>Molar Mass: 268</li>
+        <li>Electrons: 2 8 18 32 32 11 2</li>
+    </ul>
+</td><td>
+    <h4>Seaborgium (Sg)</h4>
+    <ul>
+        <li>Number: 106</li>
+        <li>Molar Mass: 271</li>
+        <li>Electrons: 2 8 18 32 32 12 2</li>
+    </ul>
+</td><td>
+    <h4>Bohrium (Bh)</h4>
+    <ul>
+        <li>Number: 107</li>
+        <li>Molar Mass: 272</li>
+        <li>Electrons: 2 8 18 32 32 13 2</li>
+    </ul>
+</td><td>
+    <h4>Hassium (Hs)</h4>
+    <ul>
+        <li>Number: 108</li>
+        <li>Molar Mass: 270</li>
+        <li>Electrons: 2 8 18 32 32 14 2</li>
+    </ul>
+</td><td>
+    <h4>Meitnerium (Mt)</h4>
+    <ul>
+        <li>Number: 109</li>
+        <li>Molar Mass: 276</li>
+        <li>Electrons: 2 8 18 32 32 15 2</li>
+    </ul>
+</td><td>
+    <h4>Darmstadtium (Ds)</h4>
+    <ul>
+        <li>Number: 110</li>
+        <li>Molar Mass: 281</li>
+        <li>Electrons: 2 8 18 32 32 17 1</li>
+    </ul>
+</td><td>
+    <h4>Roentgenium (Rg)</h4>
+    <ul>
+        <li>Number: 111</li>
+        <li>Molar Mass: 280</li>
+        <li>Electrons: 2 8 18 32 32 18 1</li>
+    </ul>
+</td><td>
+    <h4>Copernicium (Cn)</h4>
+    <ul>
+        <li>Number: 112</li>
+        <li>Molar Mass: 285</li>
+        <li>Electrons: 2 8 18 32 32 18 2</li>
+    </ul>
+</td><td>
+    <h4>Ununtrium (Uut)</h4>
+    <ul>
+        <li>Number: 113</li>
+        <li>Molar Mass: 284</li>
+        <li>Electrons: 2 8 18 32 32 18 3</li>
+    </ul>
+</td><td>
+    <h4>Flerovium (Fl)</h4>
+    <ul>
+        <li>Number: 114</li>
+        <li>Molar Mass: 289</li>
+        <li>Electrons: 2 8 18 32 32 18 4</li>
+    </ul>
+</td><td>
+    <h4>Ununpentium (Uup)</h4>
+    <ul>
+        <li>Number: 115</li>
+        <li>Molar Mass: 288</li>
+        <li>Electrons: 2 8 18 32 32 18 5</li>
+    </ul>
+</td><td>
+    <h4>Livermorium (Lv)</h4>
+    <ul>
+        <li>Number: 116</li>
+        <li>Molar Mass: 293</li>
+        <li>Electrons: 2 8 18 32 32 18 6</li>
+    </ul>
+</td><td>
+    <h4>Ununseptium (Uus)</h4>
+    <ul>
+        <li>Number: 117</li>
+        <li>Molar Mass: 294</li>
+        <li>Electrons: 2 8 18 32 32 18 7</li>
+    </ul>
+</td><td>
+    <h4>Ununoctium (Uuo)</h4>
+    <ul>
+        <li>Number: 118</li>
+        <li>Molar Mass: 294</li>
+        <li>Electrons: 2 8 18 32 32 18 8</li>
+    </ul>
+</td><td class="empty"></td></tr>
+</table>
+</body>
+</html>

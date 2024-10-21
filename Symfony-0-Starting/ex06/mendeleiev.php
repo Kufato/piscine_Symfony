@@ -1,26 +1,30 @@
 <?php
-// parse each line of the file in a array who match keys and values
+// Parse each line of the file into an array with keys and values
 function parse_mendeleiev_data($filePath)
 {
     $fileData = file($filePath);
     $elements = [];
+
     foreach($fileData as $line)
     {
         list($name, $data) = explode(' = ', $line, 2);
-        $elements['name'] = $name;
+        $element = [];
+        $element['name'] = $name;
         $pairs = explode(', ', $data);
         foreach ($pairs as $pair) {
             list($key, $value) = explode(':', $pair, 2);
-            $elements[trim($key)] = trim($value);
+            $element[trim($key)] = trim($value);
         }
+        $elements[] = $element;
     }
     return $elements;
 }
 
-// generate the base code for the html page
-function generate_html_table()
+// Generate the HTML code for the periodic table 
+function generate_html_table($elements)
 {
-    $htmlContent = "
+    // Create the base code for the html file
+    $htmlContent = <<< HTML
     <!DOCTYPE html>
     <html lang='en'>
     <head>
@@ -28,12 +32,26 @@ function generate_html_table()
         <title>Periodic table of elements</title>
         <style>
             table {
-                width: 10%;
+                width: 100%;
                 border-collapse: collapse;
             }
-            th, td {
-                border: 1px solid blue;
-                padding: 8px;
+            td {
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+                vertical-align: top;
+                box-sizing: border-box;
+            }
+            .empty {
+                border: none;
+            }
+            h4 {
+                font-size: 16px;
+            }
+            ul {
+                padding-left: 20px;
+                margin: 0;
+                list-style-position: inside;
             }
         </style>
     </head>
@@ -41,54 +59,78 @@ function generate_html_table()
         <header>
             <h1>Periodic table of elements</h1>
         </header>
-        <main>
-            <table>
-                <tr>
-                    <td>
-                        <h4>Hydrogen</h4>
-                            <ul>
-                                <li>No 42</li>
-                                <li>H</li>
-                                <Li>1.00794 </li>
-                                <li>1 electron</li>
-                            <ul>
-                    </td>
-                </tr>
-            </table>
-        </main>
-    </body>
-    </html>
-    ";
+        <table>
+    HTML;
 
-    return ($htmlContent);
-}
+    $current_row = "";
+    $previous_position = 0;
+    $maxColumns = 18;
+    
+    // Itarate on each elements of the array 
+    foreach ($elements as $element)
+    {
+        $position = $element['position'];
 
-function main()
+        // If position is 0, close the previous row and start a new one
+        if ($position == 0 && !empty($current_row))
+        {
+            if ($previous_position < $maxColumns)
+                $current_row .= str_repeat('<td class="empty"></td>', $maxColumns - $previous_position);                
+            $htmlContent .= "<tr>$current_row</tr>\n";
+            $current_row = "";
+            $previous_position = 0;
+        }
+
+        // Add empty cells if needed
+        if ($position > $previous_position + 1)
+            $current_row .= str_repeat('<td class="empty"></td>', $position - $previous_position - 1);
+
+        // Create the element's cell
+        $cell = <<<CELL
+        <td>
+            <h4>{$element['name']} ({$element['small']})</h4>
+            <ul>
+                <li>Number: {$element['number']}</li>
+                <li>Molar Mass: {$element['molar']}</li>
+                <li>Electrons: {$element['electron']}</li>
+            </ul>
+        </td>
+        CELL;
+
+        $current_row .= $cell;
+        $previous_position = $position;
+    }
+
+    // Close the last row
+    if (!empty($current_row))
+    {
+        if ($previous_position < $maxColumns)
+            $current_row .= str_repeat('<td class="empty"></td>', $maxColumns - $previous_position);
+        $htmlContent .= "<tr>$current_row</tr>\n";
+    }
+
+    // Close the HTML document
+    $htmlContent .= "</table>\n</body>\n</html>";
+
+    return $htmlContent;
+}    
+
+function add_html_content($htmlContent, $outputFile)
 {
-    $filePath = 'ex06.txt';
-    $outputFile = 'mendeleiev.html';
-
-    $elements = parse_mendeleiev_data($filePath);
-    $htmlContent = generate_html_table($elements);
+    $HTMLFile = fopen($outputFile, "w");
+    if ($HTMLFile)
+    {
+        fwrite($HTMLFile, $htmlContent);
+        fclose($HTMLFile);
+    }
+    else
+        echo "Error: impossible to create the file";
 }
 
+$filePath = 'ex06.txt';
+$outputFile = 'mendeleiev.html';
 
-// $file = fopen("mendeleiev.html", "w");
-// if ($file)
-// {
-//     // write the base code for the html page
-//     $htmlContent = generate_html_base();
-//     fwrite($file, $htmlContent);
-//     fclose($file);
-
-//     // get the data from "ex06.txt" and store it
-//     $fileData = file("ex06.txt");
-
-//     // foreach($fileData as $line)
-//     // {
-//     //     $element = parse_line_to_array($line);
-//     // }
-// }
-// else
-//     echo "Error: impossible to create the file";
+$elements = parse_mendeleiev_data($filePath);
+$htmlContent = generate_html_table($elements);
+add_html_content($htmlContent, $outputFile);
 ?>
