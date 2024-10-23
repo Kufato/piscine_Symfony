@@ -11,5 +11,5 @@ $text->append('Ouais pas mal...');
 
 $templateEngine = new TemplateEngine();
 
-$templateEngine->createFile('le_petit_prince.html', 'template.html', $text);
+$templateEngine->createFile('le_petit_prince.html', $text);
 ?>
