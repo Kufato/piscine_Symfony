@@ -1,18 +1,32 @@
 <?php
 class HotBeverage
 {
-    protected   $name;
+    protected   $nom;
     protected   $price;
-    protected   $resistence;
-    private     $description;
+    protected   $resistance;
 
-    protected function __construct($name, $price, $resistence)
+    // Constructor
+    protected function __construct($nom, $price, $resistance)
     {
-        $this->name = $name;
+        $this->nom = $nom;
         $this->price = $price;
-        $this->resistence = $resistence;
+        $this->resistance = $resistance;
     }
 
-
+    // Getters
+    public function getNom()
+    {
+        return $this->nom;
+    }
+    
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    
+    public function getResistance()
+    {
+        return $this->resistance;
+    }
 }
 ?>
