@@ -65,8 +65,8 @@ class Elem
         // Add the array $attributes
         if ($attributes !== NULL)
         {
-            foreach ($attributes as $attribute)
-                $this->attributes = $attribute;  
+            foreach ($attributes as $key => $value)
+                $this->attributes[$key] = $value;  
         }
     }
 
@@ -88,7 +88,7 @@ class Elem
         {
             $html = "<{$this->element}";
             foreach ($this->attributes as $key => $value)
-                $html .= " {$key}=\"{$value}\"";
+                $html .= " {$key}=\"{$value}\">";
         }
         else
             $html = "<{$this->element}>";
