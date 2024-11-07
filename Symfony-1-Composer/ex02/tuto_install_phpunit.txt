@@ -1,0 +1,7 @@
+1. Create the .json file
+
+2.Install PHPUnit using this file :
+composer install --no-interaction --ignore-platform-reqs
+
+3. Check the installation :
+./vendor/bin/phpunit --version

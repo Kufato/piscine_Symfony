@@ -1,0 +1,4 @@
+1. Create the .json script
+
+2. Use composer install
+composer install --no-interaction --ignore-platform-reqs
