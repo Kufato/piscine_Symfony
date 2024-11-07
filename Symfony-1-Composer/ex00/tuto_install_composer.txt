@@ -1,0 +1,17 @@
+1. Download the Composer installation script :
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+2. Check that the downloaded file has not been corrupted by comparing its hash with that provided by Composer :
+php -r "if (hash_file('sha384', 'composer-setup.php') === file_get_contents('https://composer.github.io/installer.sig')) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+3. Install Composer :
+php composer-setup.php
+
+4. Delete the coposer-setup.php file :
+php -r "unlink('composer-setup.php');"
+
+5. Making Composer globally accessible :
+sudo mv composer.phar /usr/local/bin/composer
+
+6. Check the installation :
+composer -v
