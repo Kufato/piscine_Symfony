@@ -1,0 +1,23 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    README.txt                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: axel <axel@student.42.fr>                  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/09/09 16:30:06 by axel              #+#    #+#              #
+#    Updated: 2025/09/11 11:59:36 by axel             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Command to clear the cache before the launch
+bin/console cache:clear
+
+# Command to see the routes that was put in place
+bin/console debug:router
+
+# Command to launch the project
+symfony serve
+
+# The address of the main page
+http://127.0.0.1:8000/e02

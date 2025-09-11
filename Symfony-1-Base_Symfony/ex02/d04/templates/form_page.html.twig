@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'form_div_layout.html.twig' %}
+
+{% block title %}Form Page{% endblock %}
+
+{% block content %}
+
+    <h1>Formulaire</h1>
+
+    {% if error %}
+        <div style="color: red;">{{ error }}</div>
+    {% endif %}
+
+    {{ form_start(form) }}
+
+        <div>
+            {{ form_label(form.message) }}
+            {{ form_widget(form.message) }}
+            {{ form_errors(form.message) }}
+        </div>
+
+        <div>
+            {{ form_label(form.timestamp) }}
+            {{ form_widget(form.timestamp) }}
+            {{ form_errors(form.timestamp) }}
+        </div>
+
+        <button type="submit">Submit</button>
+
+    {{ form_end(form) }}
+
+    {% if last_message %}
+        <div style="border: 1px solid #ccc; padding: 10px; margin-top: 20px; word-wrap: break-word; max-width: 600px;">
+            {{ last_message }}
+        </div>
+    {% endif %}
+
+{% endblock %}
