@@ -20,4 +20,4 @@ bin/console debug:router
 symfony serve
 
 # The address of the main page
-http://127.0.0.1:8000/e03
+http://127.0.0.1:8080/e03

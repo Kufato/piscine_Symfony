@@ -20,4 +20,4 @@ bin/console debug:router
 symfony serve
 
 # The address to see the message "Hello World!"
-http://127.0.0.1:8000/e00/firstpage
+http://127.0.0.1:8080/e00/firstpage
