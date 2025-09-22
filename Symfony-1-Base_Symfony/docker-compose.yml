@@ -3,7 +3,7 @@ services:
     build:
       context: ./docker/php
     volumes:
-      - ./ex03/d04:/var/www/symfony
+      - ./ex00/d04:/var/www/symfony
     depends_on:
       - db
 
@@ -12,7 +12,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./ex03/d04:/var/www/symfony
+      - ./ex00/d04:/var/www/symfony
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php

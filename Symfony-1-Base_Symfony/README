@@ -26,6 +26,9 @@ docker compose up -d
 # Get the shell of the container
 docker compose exec php bash
 
+# Install composer
+composer install
+
 # To change the exercice that you want to reveiw, you have to modify the docker-compose.yml with the right path of the exercice, then rebuild and restart
 docker compose up -d --build
 
