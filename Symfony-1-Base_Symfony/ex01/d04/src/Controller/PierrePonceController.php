@@ -12,5 +12,6 @@ class PierrePonceController extends AbstractController
     public function pierre_ponce_page(): Response
     {
         return $this->render('articles/pierre_ponce.html.twig');
+        // return new Response('<h1>Hello Pierre Ponce</h1>');
     }
 }

@@ -14,19 +14,9 @@ class MainPageController extends AbstractController
         return $this->render('main_page.html.twig');
     }
 
-    #[Route('/e01/{slug}', name: 'main_page_redirect')]
+    #[Route('/e01/{slug}',name: 'main_page_redirect',requirements: ['slug' => '^(?!pierre_ponce$|shrek$|laos$).+'])]
     public function article(string $slug): Response
     {
-        $articles = [
-            'laos' => 'e01/articles/laos.html.twig',
-            'pierre-ponce' => 'e01/articles/pierre_ponce.html.twig',
-            'shrek' => 'e01/articles/shrek.html.twig',
-        ];
-
-        if (array_key_exists($slug, $articles)) {
-            return $this->render($articles[$slug]);
-        }
-
         return $this->render('main_page.html.twig');
     }
 }
