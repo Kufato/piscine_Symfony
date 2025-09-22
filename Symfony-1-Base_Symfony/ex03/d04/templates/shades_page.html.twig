@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shades Page{% endblock %}
+
+{% block content %}
+    <h1>Fifty shades of colors</h1>
+
+    <table border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                {% for color, values in shades %}
+                    <th>{{ color }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in 0..(numberOfColors - 1) %}
+                <tr>
+                    {% for color, values in shades %}
+                        <td style="width:80px; height:40px; background-color: {{ values[i] }};"></td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

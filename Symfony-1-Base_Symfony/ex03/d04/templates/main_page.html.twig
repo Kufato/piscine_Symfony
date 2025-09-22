@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Main Page{% endblock %}
+
+{% block content %}
+    <h1>Bienvenue sur ma page principale</h1>
+    
+    <section class="article-list">
+        <article>
+            <h3><a href="/e01/laos" class="article-link">Article 1 : Le Laos</a></h3>
+            <p>Le Laos est un pays d’Asie du Sud-Est préservé, riche en nature, traditions bouddhistes et culture authentique, où la vie paisible et l’hospitalité des habitants séduisent les voyageurs.</p>
+        </article>
+        <article>
+            <h3><a href="/e01/pierre_ponce" class="article-link">Article 2 : La pierre ponce</a></h3>
+            <p>La pierre ponce, roche volcanique légère et poreuse, est utilisée depuis l’Antiquité pour les soins, la construction et l’industrie, alliant durabilité et utilité quotidienne.</p>
+        </article>
+        {# <article>
+            <h3><a href="/e01/shrek" class="article-link">Article 3 : Shrek</a></h3>
+            <p>Shrek, l’ogre vert devenu icône culturelle, a révolutionné l’animation avec son humour subversif et son message sur l’acceptation de soi et des différences, séduisant petits et grands dans le monde entier.</p>
+        </article> #}
+    </section>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+.article-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-link:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+</style>
+{% endblock %}
+

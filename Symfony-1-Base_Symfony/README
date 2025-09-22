@@ -1,0 +1,30 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    README                                             :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: axel <axel@student.42.fr>                  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/09/22 11:26:10 by axel              #+#    #+#              #
+#    Updated: 2025/09/22 11:36:41 by axel             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Check if docker is install
+docker --version
+
+# Check if docker compose is install
+docker compose version
+
+# Put the user in the docker group
+sudo usermod -aG docker $USER
+
+# Launch the docker
+docker compose build
+docker compose up -d
+
+# To change the exercice that you want to reveiw, you have to modify the docker-compose.yml with the right path of the exercice, then rebuild and restart
+docker compose up -d --build
+
+# Stop the containers
+docker compose down
